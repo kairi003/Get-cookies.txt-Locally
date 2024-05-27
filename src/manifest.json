@@ -3,8 +3,15 @@
   "description": "Get cookies.txt, NEVER send information outside with open-source",
   "version": "0.6.3",
   "manifest_version": 3,
-  "permissions": ["activeTab", "cookies", "downloads", "notifications"],
-  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "downloads",
+    "notifications"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -20,9 +27,13 @@
     "48": "/images/icon48.png",
     "128": "/images/icon128.png"
   },
-  "incognito": "split",
+  "incognito": "spanning",
   "background": {
-    "service_worker": "background.mjs",
-    "type": "module"
+    "page": "background.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{ac87cfd8-47b1-4401-b32e-f033af5ed96b}"
+    }
   }
 }
